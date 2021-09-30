@@ -156,11 +156,3 @@ let miTitulo,miClave,miTexto;
 
 
 
-/*
-window.onload = function() {
-    document.rellenar.ver.onclick = escribe
-    document.rellenar2.ver2.onclick = escribe2
-    document.rellenar3.ver3.onclick = escribe3
-    document.rellenar4.ver4.onclick = escribe4
-    //document.rellenar2.del.onclick=delt
-}*/
