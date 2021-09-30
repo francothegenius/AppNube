@@ -52,6 +52,7 @@ app.get('/precioEnergia', function (req, res) {
     });
 });
 
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/user', userRoutes);
