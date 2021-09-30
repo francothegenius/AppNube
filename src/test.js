@@ -9,35 +9,31 @@ let miTitulo,miClave,miTexto;
         );
         response = await response.json();
         console.log(response);
-        t = document.getElementById("caja")
-        t1 = document.getElementById("t1")
-        t2 = document.getElementById("t2")
-        t3 = document.getElementById("t3")
+        
+        var news = document.getElementById("news");
+        news.innerHTML = "";
+        for(var i = 0; i < response["result"].length; i++) {
+            
+            var section = document.createElement("section");
+            news.appendChild(section);
+            
+            var header = document.createElement("header");
+            section.appendChild(header);
+            var h3 = document.createElement("h3");
+            h3.innerHTML = "Resultado "+(i+1)+ " de casa electrica: ";
+            header.appendChild(h3);
+            var p = document.createElement("p");
+            p.innerHTML = response["result"][i]["Direccion"];
+            news.appendChild(p);
+            var p2 = document.createElement("p");
+            p2.innerHTML = response["result"][i]["Consumo"];
+            news.appendChild(p2);
+            var p3 = document.createElement("p");
+            p3.innerHTML = response["result"][i]["TipoEnergia"];
+            news.appendChild(p3);
 
-        t.innerHTML = response["result"][0]["Direccion"];
-        t1.innerHTML = "Resultado 1 de casa electrica";
-        t2.innerHTML = response["result"][0]["Consumo"];
-        t3.innerHTML = response["result"][0]["TipoEnergia"];
-
-        ta = document.getElementById("caja1")
-        ta1 = document.getElementById("ta1")
-        ta2 = document.getElementById("ta2")
-        ta3 = document.getElementById("ta3")
-
-        ta.innerHTML = response["result"][1]["Direccion"];
-        ta1.innerHTML = "Resultado 2 de casa electrica";
-        ta2.innerHTML = response["result"][1]["Consumo"];
-        ta3.innerHTML = response["result"][1]["TipoEnergia"];
-
-        tb = document.getElementById("caja2")
-        tb1 = document.getElementById("tb1")
-        tb2 = document.getElementById("tb2")
-        tb3 = document.getElementById("tb3")
-
-        tb.innerHTML = response["result"][2]["Direccion"];
-        tb1.innerHTML = "Resultado 3 de casa electrica";
-        tb2.innerHTML = response["result"][2]["Consumo"];
-        tb3.innerHTML = response["result"][2]["TipoEnergia"];
+        }
+     
       } catch (err) {
         console.error(err);
       }
@@ -52,35 +48,30 @@ let miTitulo,miClave,miTexto;
         );
         response = await response.json();
         console.log(response);
-        t = document.getElementById("caja")
-        t1 = document.getElementById("t1")
-        t2 = document.getElementById("t2")
-        t3 = document.getElementById("t3")
-        
-        t.innerHTML = response["result"][0]["Direccion"];
-        t1.innerHTML = "Resultado 1 de casa eolica";
-        t2.innerHTML = response["result"][0]["Consumo"];
-        t3.innerHTML = response["result"][0]["TipoEnergia"];
 
-        ta = document.getElementById("caja1")
-        ta1 = document.getElementById("ta1")
-        ta2 = document.getElementById("ta2")
-        ta3 = document.getElementById("ta3")
-        
-        ta.innerHTML = "";
-        ta1.innerHTML = "";
-        ta2.innerHTML = "";
-        ta3.innerHTML = "";
+        var news = document.getElementById("news");
+        news.innerHTML = "";
+        for(var i = 0; i < response["result"].length; i++) {
+            
+            var section = document.createElement("section");
+            news.appendChild(section);
+            
+            var header = document.createElement("header");
+            section.appendChild(header);
+            var h3 = document.createElement("h3");
+            h3.innerHTML = "Resultado "+(i+1)+ " de casa eolica: ";
+            header.appendChild(h3);
+            var p = document.createElement("p");
+            p.innerHTML = response["result"][i]["Direccion"];
+            news.appendChild(p);
+            var p2 = document.createElement("p");
+            p2.innerHTML = response["result"][i]["Consumo"];
+            news.appendChild(p2);
+            var p3 = document.createElement("p");
+            p3.innerHTML = response["result"][i]["TipoEnergia"];
+            news.appendChild(p3);
 
-        tb = document.getElementById("caja2")
-        tb1 = document.getElementById("tb1")
-        tb2 = document.getElementById("tb2")
-        tb3 = document.getElementById("tb3")
-        
-        tb.innerHTML = ""
-        tb1.innerHTML = "";
-        tb2.innerHTML = "";
-        tb3.innerHTML = "";
+        }
 
       } catch (err) {
         console.error(err);
@@ -95,35 +86,30 @@ let miTitulo,miClave,miTexto;
         );
         response = await response.json();
         console.log(response);
-        t = document.getElementById("caja")
-        t1 = document.getElementById("t1")
-        t2 = document.getElementById("t2")
-        t3 = document.getElementById("t3")
         
-        t.innerHTML = response["result"][0]["Direccion"];
-        t1.innerHTML = "Resultado 1 de casa solar";
-        t2.innerHTML = response["result"][0]["Consumo"];
-        t3.innerHTML = response["result"][0]["TipoEnergia"];
+        var news = document.getElementById("news");
+        news.innerHTML = "";
+        for(var i = 0; i < response["result"].length; i++) {
+            
+            var section = document.createElement("section");
+            news.appendChild(section);
+            
+            var header = document.createElement("header");
+            section.appendChild(header);
+            var h3 = document.createElement("h3");
+            h3.innerHTML = "Resultado "+(i+1)+ " de casa solar: ";
+            header.appendChild(h3);
+            var p = document.createElement("p");
+            p.innerHTML = response["result"][i]["Direccion"];
+            news.appendChild(p);
+            var p2 = document.createElement("p");
+            p2.innerHTML = response["result"][i]["Consumo"];
+            news.appendChild(p2);
+            var p3 = document.createElement("p");
+            p3.innerHTML = response["result"][i]["TipoEnergia"];
+            news.appendChild(p3);
 
-        ta = document.getElementById("caja1")
-        ta1 = document.getElementById("ta1")
-        ta2 = document.getElementById("ta2")
-        ta3 = document.getElementById("ta3")
-        
-        ta.innerHTML = response["result"][1]["Direccion"];
-        ta1.innerHTML = "Resultado 2 de casa solar";
-        ta2.innerHTML = response["result"][1]["Consumo"];
-        ta3.innerHTML = response["result"][1]["TipoEnergia"];
-
-        tb = document.getElementById("caja2")
-        tb1 = document.getElementById("tb1")
-        tb2 = document.getElementById("tb2")
-        tb3 = document.getElementById("tb3")
-        
-        tb.innerHTML = response["result"][2]["Direccion"];
-        tb1.innerHTML = "Resultado 3 de casa solar";
-        tb2.innerHTML = response["result"][2]["Consumo"];
-        tb3.innerHTML = response["result"][2]["TipoEnergia"];
+        }
 
       } catch (err) {
         console.error(err);
@@ -138,35 +124,30 @@ let miTitulo,miClave,miTexto;
         );
         response = await response.json();
         console.log(response);
-        t = document.getElementById("caja")
-        t1 = document.getElementById("t1")
-        t2 = document.getElementById("t2")
-        t3 = document.getElementById("t3")
         
-        t.innerHTML = response["result"][0]["Tipo"];
-        t1.innerHTML = "Resultado 1 de precio de energia";
-        t2.innerHTML = response["result"][0]["Nombre"];
-        t3.innerHTML = response["result"][0]["Precio"];
+        var news = document.getElementById("news");
+        news.innerHTML = "";
+        for(var i = 0; i < response["result"].length; i++) {
+            
+            var section = document.createElement("section");
+            news.appendChild(section);
+            
+            var header = document.createElement("header");
+            section.appendChild(header);
+            var h3 = document.createElement("h3");
+            h3.innerHTML = "Resultado "+(i+1)+ " de precio de energia: ";
+            header.appendChild(h3);
+            var p = document.createElement("p");
+            p.innerHTML = response["result"][i]["Tipo"];
+            news.appendChild(p);
+            var p2 = document.createElement("p");
+            p2.innerHTML = response["result"][i]["Nombre"];
+            news.appendChild(p2);
+            var p3 = document.createElement("p");
+            p3.innerHTML = response["result"][i]["Precio"];
+            news.appendChild(p3);
 
-        ta = document.getElementById("caja1")
-        ta1 = document.getElementById("ta1")
-        ta2 = document.getElementById("ta2")
-        ta3 = document.getElementById("ta3")
-        
-        ta.innerHTML = response["result"][1]["Tipo"];
-        ta1.innerHTML = "Resultado 2 de precio de energia";
-        ta2.innerHTML = response["result"][1]["Nombre"];
-        ta3.innerHTML = response["result"][1]["Precio"];
-
-        tb = document.getElementById("caja2")
-        tb1 = document.getElementById("tb1")
-        tb2 = document.getElementById("tb2")
-        tb3 = document.getElementById("tb3")
-        
-        tb.innerHTML = response["result"][2]["Tipo"];
-        tb1.innerHTML = "Resultado 3 de precio de energia";
-        tb2.innerHTML = response["result"][2]["Nombre"];
-        tb3.innerHTML = response["result"][2]["Precio"];
+        }
 
       } catch (err) {
         console.error(err);
