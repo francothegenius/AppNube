@@ -18,7 +18,10 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-
+app.use(cors( {origin: '*' } ));
+app.use(bodyParser.json());
+app.use('/user', userRoutes);
+app.use('/hola', userRoutes);
 
 app.get('/casaElectrica', function (req, res) {
     var sqlQuery='SELECT Direccion, Consumo, TipoEnergia from Casa Where TipoEnergia = "Electrica";';
@@ -53,9 +56,6 @@ app.get('/precioEnergia', function (req, res) {
 });
 
 
-app.use(cors());
-app.use(bodyParser.json());
-app.use('/user', userRoutes);
-app.use('/hola', userRoutes);
+
 
 module.exports = app;
